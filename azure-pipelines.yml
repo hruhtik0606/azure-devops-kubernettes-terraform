@@ -31,6 +31,9 @@ stages:
     steps:
     - bash: echo $(environment)QADeploy
 - stage: ProdDeploy
+  variables:
+   environment: Prod
+  dependsOn: Build
   jobs:
   - job: ProdDeployJob
     steps:
