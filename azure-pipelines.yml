@@ -33,7 +33,9 @@ stages:
 - stage: ProdDeploy
   variables:
    environment: Prod
-  dependsOn: DevDeploy
+  dependsOn: 
+  - DevDeploy
+  - QADeploy
   jobs:
   - job: ProdDeployJob
     steps:
