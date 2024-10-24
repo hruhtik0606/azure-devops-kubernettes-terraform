@@ -33,7 +33,7 @@ stages:
 - stage: ProdDeploy
   variables:
    environment: Prod
-  dependsOn: Build
+  dependsOn: DevDeploy
   jobs:
   - job: ProdDeployJob
     steps:
