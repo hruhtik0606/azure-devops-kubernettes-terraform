@@ -17,7 +17,9 @@ steps:
     workingDirectory: '$(System.DefaultWorkingDirectory)/01-currency-exchange-microservice-basic/configuration/iaac/azure/kubernetes'
     commandOptions: '-var client_id=$(cliend_id) -var client_secret=$(client_secret) -var ssh_publickey=$(publci_key.secureFilePath)'
     backendType: 'azurerm'
-    backendServiceArm: 'Free Trial(c52c2fa1-8351-4fab-aedc-3dda7d3272ee)'
+    backendServiceArm: 'Azure_resource_group'
+    backendAzureRmTenantId: '5d8b9195-7a6e-4304-8b0b-d513eeab87ba'
+    backendAzureRmSubscriptionId: '119deca0-3218-492e-9085-bcec4aaf2caf'
     ensureBackend: true
     backendAzureRmResourceGroupName: 'terraform_backend_rg'
     backendAzureRmResourceGroupLocation: 'westeurope'
@@ -25,3 +27,4 @@ steps:
     backendAzureRmContainerName: 'hruthikstoragecontainer'
     backendAzureRmKey: 'hruthik.y@1'
     allowTelemetryCollection: true
+    secureFile: 'azure_rsa.pub'
