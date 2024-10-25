@@ -17,7 +17,7 @@ steps:
     workingDirectory: '$(System.DefaultWorkingDirectory)/01-currency-exchange-microservice-basic/configuration/iaac/azure/kubernetes'
     commandOptions: '-var client_id=$(cliend_id) -var client_secret=$(client_secret) -var ssh_publickey=$(publci_key.secureFilePath)'
     backendType: 'azurerm'
-    backendServiceArm: 'Azure_resource_group'
+    backendServiceArm: 'Free Trial(c52c2fa1-8351-4fab-aedc-3dda7d3272ee)'
     ensureBackend: true
     backendAzureRmResourceGroupName: 'terraform_backend_rg'
     backendAzureRmResourceGroupLocation: 'westeurope'
