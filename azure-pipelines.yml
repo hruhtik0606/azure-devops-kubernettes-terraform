@@ -27,4 +27,3 @@ steps:
     backendAzureRmContainerName: 'hruthikstoragecontainer'
     backendAzureRmKey: 'hruthik.y@1'
     allowTelemetryCollection: true
-    secureFile: 'azure_rsa.pub'
