@@ -16,7 +16,7 @@ steps:
     provider: 'azurerm'
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)/01-currency-exchange-microservice-basic/configuration/iaac/azure /Kubernetes/'
-    commandOptions: '-var clent_id=$(client_id) -var client_secret=$(client_secret) -ver ssh_public_key=$(publickey.secureFilePath)'
+    commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_public_key=$(publickey.secureFilePath)'
     backendServiceArm: 'Azure_resource_group'
     backendAzureRmResourceGroupName: 'Azure-Terraform_rg'
     backendAzureRmStorageAccountName: 'azuretfhruthik'
