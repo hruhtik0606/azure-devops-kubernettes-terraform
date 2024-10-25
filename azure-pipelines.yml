@@ -11,15 +11,17 @@ steps:
   name: publickey
   inputs:
     secureFile: 'azure_rsa.pub'
-- task: TerraformTaskV4@4
+- task: TerraformCLI@2
   inputs:
-    provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/01-currency-exchange-microservice-basic/configuration/iaac/azure /Kubernetes/'
-    commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_public_key=$(publickey.secureFilePath)'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/01-currency-exchange-microservice-basic/configuration/iaac/azure/kubernetes'
+    commandOptions: '-var client_id=$(cliend_id) -var client_secret=$(client_secret) -var ssh_publickey=$(publci_key.secureFilePath)'
+    backendType: 'azurerm'
     backendServiceArm: 'Azure_resource_group'
-    backendAzureRmResourceGroupName: 'Azure-Terraform_rg'
-    backendAzureRmStorageAccountName: 'azuretfhruthik'
-    backendAzureRmContainerName: 'azure-tf-hruthik'
-    backendAzureRmKey: 'azurehruthik@1'
-
+    ensureBackend: true
+    backendAzureRmResourceGroupName: 'terraform_backend_rg'
+    backendAzureRmResourceGroupLocation: 'westeurope'
+    backendAzureRmStorageAccountName: 'hruthikstorage'
+    backendAzureRmContainerName: 'hruthikstoragecontainer'
+    backendAzureRmKey: 'hruthik.y@1'
+    allowTelemetryCollection: true
