@@ -8,9 +8,6 @@ steps:
 - script: echo K8S Terraform Azure!
   displayName: 'Run a one-line script'
 
-- task: UseTerraformVersion@0
-  inputs:
-    terraformVersion: '1.9.8' # Ensure this matches the latest or required version
 
 - task: DownloadSecureFile@1
   name: publickey
